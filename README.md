@@ -1,4 +1,4 @@
-# GitHub Pages Ruby Gem
+# GitHub Pages Ruby Gem - Minima 3.0 support
 
 A simple Ruby Gem to bootstrap dependencies for setting up and maintaining a local Jekyll environment in sync with GitHub Pages.
 
