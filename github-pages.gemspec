@@ -20,9 +20,10 @@ Gem::Specification.new do |s|
   s.files                 = all_files.grep(%r{^(bin|lib)/|^.rubocop.yml$})
   s.executables           = all_files.grep(%r{^bin/}) { |f| File.basename(f) }
 
-  GitHubPages::Dependencies.gems.each do |gem, version|
-    s.add_dependency(gem, "= #{version}")
-  end
+GitHubPages::Dependencies.gems.each do |gem, version|
+  next if gem == "minima" # Ignora minima
+  s.add_dependency(gem, "= #{version}")
+end
 
   s.add_dependency("mercenary", "~> 0.3")
   s.add_dependency("nokogiri", ">= 1.16.2", "< 2.0")
